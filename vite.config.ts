@@ -94,6 +94,19 @@ export default defineConfig((config) => {
     build: {
       target: 'esnext',
     },
+
+     server: {
+      allowedHosts: [
+        'boltdiy-boltdiy.mursba.easypanel.host',
+        // Se você também estiver desenvolvendo localmente, pode querer adicionar 'localhost'
+        // 'localhost',
+      ],
+      // Você pode adicionar outras configurações de servidor aqui se precisar
+      // host: '0.0.0.0', // Se o EasyPanel precisar que você ouça em todas as interfaces
+      // port: 3000, // Se você precisar definir uma porta específica
+    },
+    // FIM DA ADIÇÃO
+    
     plugins: [
       nodePolyfills({
         include: ['buffer', 'process', 'util', 'stream'],
